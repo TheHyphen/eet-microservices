@@ -18,6 +18,10 @@
     ... and we enhance the styles for impress.js.
     Basically we remove the margin and make inactive steps a little bit transparent.
 */
+.impress-enabled .step.full-width {
+  width: auto;
+}
+
 .impress-enabled .step {
   margin: 0;
   opacity: 0.1;
