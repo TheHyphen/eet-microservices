@@ -293,21 +293,25 @@ textarea {
   margin: 0 auto;
 }
 
+.jwt-heading {
+  font-size: 4rem;
+}
+
 .jwt {
   font-size: 3rem;
 }
 
 .jwt-header {
   color: #8b0000;
-  white-space:nowrap;
+  white-space: nowrap;
 }
 
 .jwt-payload {
   color: #00d1b2;
-  white-space:nowrap;
+  white-space: nowrap;
 }
 
 .jwt-signature {
   color: #0f81cc;
-  white-space:nowrap;
+  white-space: nowrap;
 }
