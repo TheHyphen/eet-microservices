@@ -73,6 +73,13 @@
           A "simple" microservice
         </h3>
       </div>
+      <div class="step has-text-centered" data-x="2600" data-y="1600">
+        <h3 class="title is-size-2">At scale, might look like:</h3>
+        <p class="is-size-3">100s of microservices</p>
+        <p class="is-size-3">1000s of production changes a day</p>
+        <p class="is-size-3">10,000s of instances</p>
+        <p class="is-size-3">1,000,000s of users</p>
+      </div>
       <div
         class="step has-text-centered"
         data-x="2600"
@@ -81,38 +88,129 @@
       >
         <img
           class="image"
-          src="img/uber-diagram.png"
+          src="img/netflix-deathstar.png"
           alt="Netflix's Deathstar Diagram"
         />
-        <h3 class="subtitle is-size-3 has-text-centered">
+        <h3 class="subtitle is-size-3">
           Netflix's Deathstar Diagram
         </h3>
       </div>
       <div
         class="step has-text-centered"
         data-x="2600"
-        data-y="3300"
+        data-y="2700"
         data-scale="2"
       >
         <img
           class="image"
-          src="img/uber-diagram.png"
+          src="img/amazon-deathstar.png"
           alt="Amazon's Deathstar Diagram"
         />
-        <h3 class="subtitle is-size-3 has-text-centered">
+        <h3 class="subtitle is-size-3">
           Amazon's Deathstar Diagram
         </h3>
       </div>
-      <div class="step " data-x="5600" data-y="2500" data-scale="5">
+      <div class="step" data-x="4800" data-y="1300" data-scale="3">
         <h2 class="problems-at">
-          Problems at
+          Security at
         </h2>
         <h2 class="massive">
           massive scale
         </h2>
       </div>
+      <div class="step" data-x="4800" data-y="1900" data-scale="3">
+        <p class="is-size-3">
+          Many services &mdash; many surface areas of attack
+        </p>
+        <p class="substep is-size-3">
+          Polyglot nature does not make it any easier
+        </p>
+        <p class="substep is-size-3">
+          Dependency "Forest"
+        </p>
+        <p class="substep is-size-3">
+          Code Duplication and Developer Productivity
+        </p>
+      </div>
+      <div class="step" data-x="4000" data-y="3400">
+        <h2 class="small-heading-text" style="margin-left: 150px;">
+          Securing
+        </h2>
+        <h2 class="big-heading-text" style="margin-top: -35px;">
+          Microservices
+        </h2>
+        <p class="substep small-heading-text" style="margin-top: 30px;">
+          Abstract common parts
+        </p>
+        <p class="substep small-heading-text" style="margin-top: 5px;">
+          Zero Trust Network
+        </p>
+        <p class="substep small-heading-text" style="margin-top: 5px;">
+          Defence in Depth
+        </p>
+      </div>
+
+      <!--      Authenticate with sessions-->
+      <div class="step" data-x="4000" data-y="4400">
+        <h3 class="subtitle is-size-3" style="margin-left: 140px;">
+          Let's go old school and
+        </h3>
+        <h2 class="authenticate-with-session">Authenticate with Sessions</h2>
+      </div>
+      <div class="step has-text-centered" data-x="4000" data-y="4650">
+        <img
+          class="image"
+          src="img/session.png"
+          alt="Session Token Authentication"
+        />
+      </div>
+      <div class="step has-text-centered" data-x="4000" data-y="4650">
+        <img
+          class="image"
+          src="img/session-2.png"
+          alt="Session Token Authentication - Busy Service"
+        />
+      </div>
+      <div class="step" data-x="4000" data-y="5050">
+        <div class="rows">
+          <div class="columns" style="align-items: center">
+            <h2 class="big-heading-text column is-2">
+              💡
+            </h2>
+            <div class="column is-10">
+              <p class="is-size-2">
+                Let's put the user identity in request headers!
+              </p>
+              <p class="substep is-size-2">
+                Perhaps an <em>encrypted token</em>?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--      OAuth2 and OpenID Connect-->
+      <div
+        class="step has-text-centered"
+        data-x="4000"
+        data-y="5050"
+        data-scale="0.05"
+      >
+        <h3 class="massive">
+          OAuth 2.0
+        </h3>
+      </div>
+      <div
+        class="step has-text-centered"
+        data-x="4000"
+        data-y="5055"
+        data-scale="0.05"
+      >
+        <img class="image" src="img/oauth-flow.png" alt="OAuth Abstract Flow" />
+      </div>
     </div>
     <script src="js/vendor/impress.js"></script>
+    <script src="js/vendor/impress.substep.js"></script>
     <script>
       impress().init();
     </script>

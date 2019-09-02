@@ -273,6 +273,12 @@ textarea {
   line-height: 7rem;
 }
 
+.authenticate-with-session {
+  font-size: 4rem;
+  line-height: 2rem;
+  margin-top: -10px;
+}
+
 .problems-at {
   font-size: 3.2rem;
   line-height: 4rem;
@@ -281,4 +287,8 @@ textarea {
 .massive {
   line-height: 3rem;
   font-size: 8rem;
+}
+
+.image {
+  margin: 0 auto;
 }

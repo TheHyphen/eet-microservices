@@ -1,17 +1,17 @@
 .step {
-    position: relative;
-    width: 900px;
-    padding: 40px;
-    margin: 20px auto;
+  position: relative;
+  width: 900px;
+  padding: 40px;
+  margin: 20px auto;
 
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing:    border-box;
-    -ms-box-sizing:     border-box;
-    -o-box-sizing:      border-box;
-    box-sizing:         border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 
-    font-family: 'PT Serif', georgia, serif;
-    line-height: 1.5;
+  font-family: "PT Serif", georgia, serif;
+  line-height: 1.5;
 }
 
 /*
@@ -19,17 +19,32 @@
     Basically we remove the margin and make inactive steps a little bit transparent.
 */
 .impress-enabled .step {
-    margin: 0;
-    opacity: 0.2;
+  margin: 0;
+  opacity: 0.1;
 
-    -webkit-transition: opacity 1s;
-    -moz-transition:    opacity 1s;
-    -ms-transition:     opacity 1s;
-    -o-transition:      opacity 1s;
-    transition:         opacity 1s;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
-.impress-enabled .step.active { opacity: 1 }
+.impress-enabled .step.active {
+  opacity: 1;
+}
+
+.impress-enabled .step.past {
+  opacity: 0.1;
+}
+
+.substep {
+  opacity: 0;
+}
+
+.substep.substep-visible {
+  opacity: 1;
+  transition: opacity 1s;
+}
 
 /*
 
