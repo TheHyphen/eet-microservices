@@ -24,21 +24,33 @@
 
 .impress-enabled .step {
   margin: 0;
-  opacity: 0.1;
+  opacity: 0;
 
-  -webkit-transition: opacity 1s;
-  -moz-transition: opacity 1s;
-  -ms-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity 1s linear, text-decoration 1s linear;
+  -moz-transition: opacity 1s linear, text-decoration 1s linear;
+  -ms-transition: opacity 1s linear, text-decoration 1s linear;
+  -o-transition: opacity 1s linear, text-decoration 1s linear;
+  transition: opacity 1s linear, text-decoration 1s linear;
 }
 
 .impress-enabled .step.active {
   opacity: 1;
 }
 
+.impress-enabled .step.active .striked {
+  text-decoration: line-through;
+}
+
 .impress-enabled .step.past {
   opacity: 0.1;
+}
+
+.impress-enabled .step.past.visible-past {
+  opacity: 0.8;
+}
+
+.impress-enabled .step.past.hidden-past {
+  opacity: 0;
 }
 
 .substep {
