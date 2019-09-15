@@ -1,0 +1,54 @@
+defaults: &defaults
+  docker:
+    - image: circleci/python:3.7.1-node
+  working_directory: ~/tmp/circlci-now
+
+version: 2.1
+orbs:
+  aws-s3: circleci/aws-s3@1.0.11
+jobs:
+  checkout:
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/tmp/circlci-now
+      - restore_cache:
+          keys:
+            - npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
+            - npm-cache-{{ .Branch }}
+            - npm-cache-
+      - run:
+          name: npm
+          command: npm i
+      - save_cache:
+          key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - persist_to_workspace:
+          root: .
+          paths: .
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/tmp/circlci-now
+      - deploy:
+          name: Build
+          command: |
+            npm build
+      - aws-s3/sync:
+          from: dist
+          to: "s3://talks.faizudd.in/microservices-security"
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=86400"
+          overwrite: true
+workflows:
+  version: 2
+  test-deploy-purge:
+    jobs:
+      - checkout
+      - deploy:
+          requires:
+            - checkout

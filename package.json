@@ -4,7 +4,8 @@
   "description": "EET Microservices Security Presentation",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "parcel build index.html"
   },
   "keywords": [
     "eet",
