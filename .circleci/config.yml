@@ -36,7 +36,7 @@ jobs:
       - deploy:
           name: Build
           command: |
-            npm build
+            npm run build
       - aws-s3/sync:
           from: dist
           to: "s3://talks.faizudd.in/microservices-security"
