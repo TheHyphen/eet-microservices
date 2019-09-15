@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Faizuddin Mohammed -- Developer -- @mdfaizuddin15
 
 # THANKS
 
@@ -12,4 +12,5 @@
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    ImpressJS, BulmaCSS, Parcel
+
