@@ -8,5 +8,7 @@ Feel free to use it in your presentations. No need to attribute but wonderful if
 Used some tools:
 
 Parcel - bundling for minification and production use.
-ImpressJS - for the cool transitions and presentation framework
-BulmaCSS - for some neat looking styles
+
+ImpressJS - for the cool transitions and presentation framework.
+
+BulmaCSS - for some neat looking styles.
