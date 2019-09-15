@@ -15,7 +15,6 @@
   "author": "Mohammed Faizuddin <faizuddin@everest.engineering>",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-htmlmin": "^5.0.1"
+    "parcel-bundler": "^1.12.3"
   }
 }
