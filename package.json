@@ -13,5 +13,9 @@
     "microservices"
   ],
   "author": "Mohammed Faizuddin <faizuddin@everest.engineering>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1"
+  }
 }
